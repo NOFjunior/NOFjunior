@@ -448,8 +448,14 @@ body {
   margin-left: 5%;
 }
 
+
+
 .sec-seven form input::placeholder {
   color: white;
+}
+
+.sec-seven .get-in-touch .row {
+    margin: 0;
 }
 
 .sec-seven form textarea {
