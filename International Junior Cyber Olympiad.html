@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <!--  CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      body {
+        overflow-x: hidden;
+        padding: 0;
+      } 
+
+      .images {
+        background-image: url('https://static.wixstatic.com/media/205f6d_b9af14f49ee445f99cd8e2f3cd118ea9~mv2.jpg/v1/fill/w_336,h_639,al_c,q_80,usm_0.66_1.00_0.01/205f6d_b9af14f49ee445f99cd8e2f3cd118ea9~mv2.webp');
+       /* width: 50%; */
+        /*height: 678px;*/
+        background-position: center;
+        background-repeat: no-repeat;
+        /*margin-top: -30px;*/
+      }
+		
+		/*------------------- New changes -----------------*/
+		
+		.texttr{
+			
+			margin: 10px;
+			position: relative;
+			color: #fff;
+			
+			
+		}
+		
+
+		.textwarp {
+			position : relative;
+			display: flex;
+			justify-content : center;
+			align-items: center;
+			background: rgba(76, 197, 173);
+			width: 80%;
+			height: auto;
+			margin-left: 10%;
+			padding: 1%;
+			
+			}
+			
+			.textwarp::before{
+				content: '';
+				position : absolute;
+				top:0px;
+				right:0px;
+				bottom:0px;
+				left:0px;
+				background-image:url(https://static.wixstatic.com/media/205f6d_1e96578bbfc2435ca0eff25702ff33ee~mv2.png/v1/fill/w_700,h_152,al_c,q_85/205f6d_1e96578bbfc2435ca0eff25702ff33ee~mv2.webp);
+				opacity: 15%;
+				}
+		
+      
+		/*------------------- New changes -----------------*/
+		
+		/*.textwarp {
+			background: rgba(76, 197, 173, 0.2);
+			background-image:url(https://static.wixstatic.com/media/205f6d_1e96578bbfc2435ca0eff25702ff33ee~mv2.png/v1/fill/w_700,h_152,al_c,q_85/205f6d_1e96578bbfc2435ca0eff25702ff33ee~mv2.webp);
+			width: 80%;
+			height: auto;
+			margin-left: 100px;
+			color: #fff;
+			}
+		div .textwarp p {
+			padding-top:10px;
+			margin: 10px;
+		}*/
+		
+		/*------------------- New changes -----------------*/
+
+		
+		
+       .text h1 {
+         color: #44e;
+         font-weight: 700;
+         margin-left: 10%;
+         margin-top: 20px;
+         margin-bottom: 10px;
+         font-size: 32px;
+       } 
+
+       .text p{
+         font-weight: 600;
+         font-size: 16px;
+         width: 75%;
+         margin-left: 10%;
+       } 
+
+       .text .btn1{
+		   
+		  text-decoration: none;
+          color: white;
+          background-color: #413ADA;
+          border: none;
+          font-weight: 500;
+          font-size: 20px;
+          padding: 5px 15px;
+          /*width: 5em;*/
+          margin-bottom: 5px;
+		  margin-top: 10px;
+          
+        
+        }
+
+       .text .btn2 {
+         margin-left: 10%;
+       }
+
+      .text .btn2 button {
+            
+            background-color: rgb(250, 137, 137);
+            border: none;
+            font-weight: 500;
+            font-size: 20px;
+            padding: 5px;
+            width: 120px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+          }
+
+      .text .btn2 button a {
+         color: white;
+      }
+
+      @media screen and (max-width: 680px) {
+       .one .row {
+          display: inline;
+        }
+		
+		  .textwarp{
+			  margin:0 auto;
+		  }
+		  
+        .images {
+          margin-top: -70px;
+		 height: 500px;
+        }
+      }
+
+    </style>
+</head>
+<body>
+
+  <nav class="navbar sticky-top navbar-expand-md navbar-light">
+
+    <a class="navbar-brand" href="index.html">
+       <img src="https://i.postimg.cc/C5csCwNz/nof-junior-logo-cloud.png" alt="NOF junior">
+    </a>
+    <a class="navbar-toggler" type="a" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <button class="navbar-toggler-icon"></button>
+    </a>
+
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="schools.html">SCHOOLS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="parents.html">PARENTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="awards.html">AWARDS &amp; RECOGNITION</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.nof.org.in/">OLYMPIAD FOR CLASS 6-12</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="downloads.html">DOWNLOADS</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item">
+          <div class="main">
+            <p>More...</p>
+              <div class="hide">
+                <ul>
+                  <li><a  href="practice.html">PRACTICE KIT</a></li>
+                  <li><a  href="#sec-five">PRACTICE KIT</a></li>
+                  <li><a  href="reports.html">REPORTS &amp; ANALYSIS</a></li>
+                  <li><a  href="registration.html">REGISTER YOUR SCHOOL</a></li>
+                  <li><a  href="#sec-six">CONTACT</a></li>
+                  <li><a  href="about-us.html">ABOUT US</a></li>
+                  <li><a  href="partner.html">PARTNER WITH US</a></li>
+                  <li><a  href="blog.html">BLOG</a></li>
+                </ul>
+              </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+ 
+
+  <section class="one">
+    <div class="row">
+      <div class="col-md-3 images">
+        <p style="text-align: center;"></p>
+      </div>
+      <div class="col-md-9 text">
+        <h1>International Junior Cyber Olympiad</h1>
+        <p>NOF Junior conducts International Junior Maths Olympiad for the students of Pre-school to Class 5. The questions are interactive, with voice support which means the students can touch the cartoons, and other elements on the screen, read &amp; listen to the question as well this makes the entire exercise very entertaining &amp; engaging.
+        <br><br>
+
+        To know more about class specific syllabus, learning resources, and how to practice click on this link.</p>
+		  
+		  <div style="margin-left: 10%; margin-bottom: 2%;">
+			  <a href="#" style="cursor: pointer; text-decoration: none; font-size: 20px; color:#413ADA; font-weight: 400;">Olympiad Practice Books</a></div>
+		
+		 <div class="textwarp">
+	  		<div class="texttr">NOF Junior is now accepting Individual registration. You can now register your child and can appear for the Olympiad online.<br><br>
+	  		<a class="btn1" href="#">Know more</a>
+	  		</div>
+ 		</div> 
+        
+
+        <p style="color: #44e;">Explore other classes:</p>
+        <div class="btn2">
+          <button><a href="" style="font-size: 0.8em">MATHS</a></button>
+          <button><a href="" style="font-size: 0.8em">SCIENCE</a></button>
+          <button><a href="" style="font-size: 0.8em">ENGLISH</a> </button>
+          <button><a href="" style="font-size: 0.8em">CYBER</a></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="sec-six" id="sec-six">
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <h6>CLASSES FOR INTERNATIONAL OLYMPIADS</h6>
+          <ul>
+            <li><a href="">Olympiad exam for Pre-Primary</a></li>
+        <li><a href="">Olympiad exam for Nursery</a></li>
+            <li><a href="">Olympiad exam for LKG</a></li>
+            <li><a href="">Olympiad exam for UKG</a></li>
+            <li><a href="">Olympiad exam for Class 1</a></li>
+            <li><a href="">Olympiad exam for Class 2</a></li>
+            <li><a href="">Olympiad exam for Class 3</a></li>
+            <li><a href="">Olympiad exam for Class 4</a></li>
+            <li><a href="">Olympiad exam for Class 5</a></li>
+          </ul>
+        </div>
+        <div class="col-md">
+          <h6>INTERNATIONAL OLYMPIADS</h6>
+          <ul>
+            <li><a href="">International Junior Maths Olympiad</a></li>
+            <li><a href="">International Junior Science Olympiad</a></li>
+            <li><a href="">International Junior English Olympiad</a></li>
+            <li><a href="">International Junior GK Olympiad</a></li>
+            <li><a href="">International Junior Cyber Olympiad</a></li>
+          </ul>
+        </div>
+        <div class="col-md">
+          <h6>PRACTICE BOOKS FOR OLYMPIADS</h6>
+          <ul>
+            <li><a href="">Maths Practice Books for Olympiads</a></li>
+            <li><a href="">English Practice Books for Olympiads</a></li>
+            <li><a href="">Science Practice Books for Olympiads</a></li>
+            <li><a href="">GK Practice Books for Olympiads</a></li>
+            <li><a href="">Cyber Practice Books for Olympiads</a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+  <section class="sec-seven">
+    <div class="conatiner">
+      <div class="row">
+        <div class="col-md address">
+          <h2>NOF Junior</h2>
+          <p>108, Saket <br> Indore 452018 MP</p>
+          <p>junior@groupnof.com <br> +91 93011 95542</p>
+          <div class="icon">
+            <a href="https://in.pinterest.com/5855264130ae1e564c13d784250868/" style="color: white">
+              <i class="fab fa-pinterest fa-2x" style="margin-right: 10px;"></i>
+              </a>
+            <a href="https://www.instagram.com/nofjunior/" style="color: white">
+              <i class="fab fa-instagram fa-2x" style="margin-right: 10px;"></i>
+            </a>
+            <a href="https://www.facebook.com/NOF-Junior-105382224526859/" style="color: white">
+              <i class="fab fa-facebook-f fa-2x" style="margin-right: 10px;"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCoVgu8YEtOEDZRnHoebokEA" style="color: white">
+              <i class="fab fa-youtube fa-2x" style="margin-right: 10px;"></i>
+            </a>
+
+          </div>
+        </div>
+        <div class="col-md form">
+        <h2>Get in touch with us</h2>
+        <form id="test" class="get-in-touch" method="post" data-email="brajesh@nof.org.in" action="" onsubmit="return submitUserForm();">
+          <div class="row">
+            <div class="form-group col-sm-6">
+              <input type="text" placeholder="First Name" name="fname" id="fname" class="form-control">
+              <h5 id="usercheck" class="error-msg">
+                Enter 3 charecter at least
+              </h5>
+            </div>
+            <div class="form-group col-sm-6">
+            
+              <input type="text" placeholder="Last Name" name="lname" id="lname" class="form-control">
+              <h5 id="lNameCheck" class="error-msg">
+                Enter 3 charecter at least
+              </h5>
+            </div>
+            <div class="form-group col-sm-6">
+              <input placeholder="Enter Phone No." type="text" name="phone" id="phone" class="form-control">
+              <h5 id="phoneCheck" class="error-msg">
+                Enter 10 digit phone number
+              </h5>
+            </div>
+            <div class="form-group col-sm-6">
+              <input type="email" placeholder="Enter Email" name="email" id="email" class="form-control">
+              <h5 id="emailvalid" class="form-text error-msg">
+                Your email must be a valid email
+            </h5>
+            </div>
+            <div class="col-sm-12">
+              <textarea placeholder="Type your message here..."></textarea>
+            </div>
+          </div>
+          
+        
+        
+          <div class="row submit">
+            <div class="col-sm">
+              <div class="g-recaptcha" data-sitekey="6Lc-migaAAAAAIPb7ZHiLx6LSls_y0QN8RXobQdf" data-callback="verifyCaptcha"></div>
+              <div id="g-recaptcha-error"></div>
+            </div>
+            <div class="col-sm" id="btn"><button type="button" class="submitBtn">Submit</button></div>
+          </div>
+        
+        
+          <p>Thanks for submitting!</p>
+        
+        </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14720.388091538412!2d75.897959!3d22.7246349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1c1071e66436e26a!2sNational%20Olympiad%20Foundation!5e0!3m2!1sen!2sin!4v1608547736958!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
+  </div>
+
+  <section class="sec-eight">
+    <div class="row">
+      <div class="col-md">
+        <ul>
+          <li style="border-right: 1px solid #44e;"><a href="privacy.html">Privacy Policy</a></li>
+          <li style="border-right: 1px solid #44e;">Terms of Service</li>
+          <li>Disclaimer</li>
+        </ul>
+      </div>
+      <div class="col-md">
+        <p>Made with ♥ for kids. © NOF Junior 2020-2022. All rights reserved.</p>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+  
+    function callMap() {
+      
+      var location = {lat: 34.433340, lng: -93.029950 };
+      var map = new google.maps.Map(document.getElementById("api"), {
+        zoom: 4,
+        center: location
+      });
+      
+    }
+     $(document).ready(function () {
+ 
+       
+       /*error msg function*/
+        $('#usercheck').hide();
+        $('#lNameCheck').hide();
+        $('#phoneCheck').hide();
+        $('#emailvalid').hide();
+       
+       // error variable
+       let usernameError = true;
+       let lastNameError = true;
+       let phoneNoError = true;
+       let emailError = true;
+       
+       //funcation call for validation
+       $('#fname').keyup(function () {
+         validateUsername();
+       });
+       
+       $('#lname').keyup(function () {
+         validatelastname();
+       });
+       
+        $('#phone').keyup(function () {
+         validatePhoneNumber();
+       });
+       $('#email').keyup(function () {
+           validateEmail();
+      });
+         
+      // Validate Email 
+      function validateEmail(){
+        const email =
+          document.getElementById('email');
+        email.addEventListener('blur', () => {
+          let regex =
+            /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+          let s = email.value;
+          if (regex.test(s)) {
+            emailError = true;
+            $('#emailvalid').hide();
+          }
+          else {
+            emailError = false;
+            $('#emailvalid').show();
+          }
+        }) 
+      }
+       
+       
+      // validate phone number
+      function validatePhoneNumber(){
+        let phoneValue = $('#phone').val();
+      
+         if (phoneValue.length < 10) { 
+          $('#phoneCheck').show();
+          
+          phoneNoError = false;
+          return false;
+        }
+        else {
+          $('#phoneCheck').hide();
+        }
+      }
+       
+      //validate last name
+       function validatelastname(){
+         let lnameValue = $('#lname').val();
+         if (lnameValue.length == '') {
+           $('#lNameCheck').show();
+           lastNameError = false;
+           return false;
+         }
+          else if ((lnameValue.length < 3) ||
+           (lnameValue.length > 10)) {
+           $('#lNameCheck').show();
+            
+           lastNameError = false;
+           return false;
+         }
+         else {
+           $('#lNameCheck').hide();
+         }
+       }
+       
+       //validate user first name
+       function validateUsername() {
+         let usernameValue = $('#fname').val();
+         if (usernameValue.length == '') {
+           $('#usercheck').show();
+           usernameError = false;
+           return false;
+         }
+         else if ((usernameValue.length < 3) ||
+           (usernameValue.length > 10)) {
+           $('#usercheck').show();
+           
+           usernameError = false;
+           return false;
+         }
+         else {
+           $('#usercheck').hide();
+         }
+       } 
+             
+       //funcation for submit button
+       $('.submitBtn').click(function () {
+       
+         validateUsername();
+         validatelastname();
+         validatePhoneNumber();
+         validateEmail();
+         var response = grecaptcha.getResponse();
+         if (response.length == 0) {
+           document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+           return false;
+         }
+         if ((usernameError == true) &&
+           (lastNameError == true) &&
+           (phoneNoError == true) &&
+           (emailError == true)) {
+           return true;
+           
+         } else {
+           document.getElementById("test").reset();
+         }
+       }); 
+       
+       
+  });
+  function verifyCaptcha() {
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+  }
+    </script>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script type="text/javascript">
+      (function ($, W, D) {
+        var JQUERY4U = {};
+        JQUERY4U.UTIL = {
+          setupFormValidation: function () {
+            $('#google_form').validate({
+              ignore: ":hidden:not(#keycode)",
+              rules: {
+                "hiddencode": {
+                  required: function () {
+                    if (grecaptcha.getResponse() == '') {
+                      return true;
+                    } else { return false; }
+                  }
+                }
+              }
+            });
+          }
+        }
+        $(D).ready(function ($) {
+          JQUERY4U.UTIL.setupFormValidation();
+        });
+      })(jQuery, window, document);
+    </script> -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP9YUjtESieV5DTEIDJY2egTjJAdfnezg&callback=callMap">
+  
+    </script>
+  
+  </body>
+</html>
