@@ -48,7 +48,7 @@
         font-size: 18px;
         font-weight: 600;
         padding: 15px;
-        width: 200px;
+        width: 150px;
         margin-left: 15%;
         margin-top: 10px;
         margin-bottom: 40px;
@@ -71,7 +71,7 @@
   <nav class="navbar sticky-top navbar-expand-md navbar-light">
 
     <a class="navbar-brand" href="index.html">
-      <img src="images/nof-junior-logo-cloud.png" />
+      <img src="https://i.postimg.cc/C5csCwNz/nof-junior-logo-cloud.png" alt="NOF junior">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -89,7 +89,7 @@
           <a class="nav-link" href="parents.html">PARENTS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="awards.html">AWARDS & RECOGNITION</a>
+          <a class="nav-link" href="awards.html">AWARDS &amp; RECOGNITION</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://www.nof.org.in/">OLYMPIAD FOR CLASS 6-12</a>
@@ -98,9 +98,7 @@
           <a class="nav-link" href="downloads.html">DOWNLOADS</a>
         </li>
         
-        
-        
-        
+               
         <li class="nav-item">
           <div class="main">
             <p>More...</p>
@@ -131,8 +129,8 @@
       <a href="downloads.html"><button>VIEW REPORT</button></a>
     </div>
 
-    <div class="col-md image">
-      <img src="images/nof-report-analysis.gif" alt="">
+    <div class="col-md image"  style="padding-left: 0px;">
+      <img src="https://static.wixstatic.com/media/205f6d_efa8c7139b6a4c39a29525550ce1aae9~mv2.gif" alt="">
     </div>
   </div>
 </section>
@@ -179,7 +177,7 @@
   </section>
 
 
-  <section class="sec-seven">
+  <section class="sec-seven" style="height: 560px;">
     <div class="conatiner">
       <div class="row">
         <div class="col-md address">
@@ -187,72 +185,83 @@
           <p>108, Saket <br> Indore 452018 MP</p>
           <p>junior@groupnof.com <br> +91 93011 95542</p>
           <div class="icon">
-            <i class="fab fa-pinterest fa-2x" style="margin-right: 10px;">
-              <a href="https://in.pinterest.com/5855264130ae1e564c13d784250868/"></a>
-            </i>
-            <i class="fab fa-instagram fa-2x" style="margin-right: 10px;">
-              <a href="https://www.instagram.com/nofjunior/"></a>
-            </i>
-            <i class="fab fa-facebook-f fa-2x" style="margin-right: 10px;">
-              <a href="https://www.facebook.com/NOF-Junior-105382224526859/"></a>
-            </i>
-            <i class="fab fa-youtube fa-2x" style="margin-right: 10px;">
-              <a href="https://www.youtube.com/channel/UCoVgu8YEtOEDZRnHoebokEA"></a>
-            </i>
+            <a href="https://in.pinterest.com/5855264130ae1e564c13d784250868/" style="color: white">
+              <i class="fab fa-pinterest fa-2x" style="margin-right: 10px;"></i>
+              </a>
+            <a href="https://www.instagram.com/nofjunior/" style="color: white">
+              <i class="fab fa-instagram fa-2x" style="margin-right: 10px;"></i>
+            </a>
+            <a href="https://www.facebook.com/NOF-Junior-105382224526859/" style="color: white">
+              <i class="fab fa-facebook-f fa-2x" style="margin-right: 10px;"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCoVgu8YEtOEDZRnHoebokEA" style="color: white">
+              <i class="fab fa-youtube fa-2x" style="margin-right: 10px;"></i>
+            </a>
+
           </div>
         </div>
         <div class="col-md form">
-          <h2>Get in touch with us</h2>
-          <form>
-            <input placeholder="First Name">
-            <input placeholder="Last Name" class="even">
-            <br>
-            <input placeholder="Phone">
-            <input placeholder="Email" class="even">
-            <br>
-            <textarea placeholder="Type your message here..."></textarea>
-
-          
-              <div class="row submit">
-                <div class="col-sm">
-                  <div class="checkmark" style=
-                    "width: 200px;
-                      height:50px;  
-                      padding:10px;
-                      background-color:white;
-                      border-radius:1px;" >
-                      <label>
-                        <input type="checkbox" style="
-                        float: left; 
-                        width:30px; 
-                        margin-top:-4px;
-                        " >
-                        <span style="float: left;
-                        color: black;"> I'm not a robot</span>
-                      </label>
-                  </div>
-                </div>
-                <div class="col-sm"><button>Submit</button></div>
-              </div>
+        <h2>Get in touch with us</h2>
+        <form id="test" class="get-in-touch" method="post" data-email="brajesh@nof.org.in" action="" onsubmit="return submitUserForm();">
+          <div class="row">
+            <div class="form-group col-sm-6">
+              <input type="text" placeholder="First Name" name="fname" id="fname" class="form-control">
+              <h5 id="usercheck" class="error-msg">
+                Enter 3 charecter at least
+              </h5>
+            </div>
+            <div class="form-group col-sm-6">
             
-
-            <p>Thanks for submitting!</p>
-
-          </form>
+              <input type="text" placeholder="Last Name" name="lname" id="lname" class="form-control">
+              <h5 id="lNameCheck" class="error-msg">
+                Enter 3 charecter at least
+              </h5>
+            </div>
+            <div class="form-group col-sm-6">
+              <input placeholder="Enter Phone No." type="text" name="phone" id="phone" class="form-control">
+              <h5 id="phoneCheck" class="error-msg">
+                Enter 10 digit phone number
+              </h5>
+            </div>
+            <div class="form-group col-sm-6">
+              <input type="email" placeholder="Enter Email" name="email" id="email" class="form-control">
+              <h5 id="emailvalid" class="form-text error-msg">
+                Your email must be a valid email
+            </h5>
+            </div>
+            <div class="col-sm-12">
+              <textarea placeholder="Type your message here..."></textarea>
+            </div>
+          </div>
+          
+        
+        
+          <div class="row submit">
+            <div class="col-sm">
+              <div class="g-recaptcha" data-sitekey="6Lc-migaAAAAAIPb7ZHiLx6LSls_y0QN8RXobQdf" data-callback="verifyCaptcha"></div>
+              <div id="g-recaptcha-error"></div>
+            </div>
+            <div class="col-sm" id="btn"><button type="button" class="submitBtn">Submit</button></div>
+          </div>
+        
+        
+          <p>Thanks for submitting!</p>
+        
+        </form>
         </div>
       </div>
     </div>
   </section>
 
   <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14720.388091538412!2d75.897959!3d22.7246349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1c1071e66436e26a!2sNational%20Olympiad%20Foundation!5e0!3m2!1sen!2sin!4v1608547736958!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>	
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14720.388091538412!2d75.897959!3d22.7246349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1c1071e66436e26a!2sNational%20Olympiad%20Foundation!5e0!3m2!1sen!2sin!4v1608547736958!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
   </div>
 
   <section class="sec-eight">
     <div class="row">
       <div class="col-md">
         <ul>
-          <li style="border-right: 1px solid #44e;">Privacy Policy</li>
+          <li style="border-right: 1px solid #44e;"><a href="privacy.html">Privacy Policy</a></li>
           <li style="border-right: 1px solid #44e;">Terms of Service</li>
           <li>Disclaimer</li>
         </ul>
@@ -264,8 +273,185 @@
   </section>
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+    <script>
+  
+    function callMap() {
+      
+      var location = {lat: 34.433340, lng: -93.029950 };
+      var map = new google.maps.Map(document.getElementById("api"), {
+        zoom: 4,
+        center: location
+      });
+      
+    }
+     $(document).ready(function () {
+ 
+       
+       /*error msg function*/
+        $('#usercheck').hide();
+        $('#lNameCheck').hide();
+        $('#phoneCheck').hide();
+        $('#emailvalid').hide();
+       
+       // error variable
+       let usernameError = true;
+       let lastNameError = true;
+       let phoneNoError = true;
+       let emailError = true;
+       
+       //funcation call for validation
+       $('#fname').keyup(function () {
+         validateUsername();
+       });
+       
+       $('#lname').keyup(function () {
+         validatelastname();
+       });
+       
+        $('#phone').keyup(function () {
+         validatePhoneNumber();
+       });
+       $('#email').keyup(function () {
+           validateEmail();
+      });
+         
+      // Validate Email 
+      function validateEmail(){
+        const email =
+          document.getElementById('email');
+        email.addEventListener('blur', () => {
+          let regex =
+            /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+          let s = email.value;
+          if (regex.test(s)) {
+            emailError = true;
+            $('#emailvalid').hide();
+          }
+          else {
+            emailError = false;
+            $('#emailvalid').show();
+          }
+        }) 
+      }
+       
+       
+      // validate phone number
+      function validatePhoneNumber(){
+        let phoneValue = $('#phone').val();
+      
+         if (phoneValue.length < 10) { 
+          $('#phoneCheck').show();
+          
+          phoneNoError = false;
+          return false;
+        }
+        else {
+          $('#phoneCheck').hide();
+        }
+      }
+       
+      //validate last name
+       function validatelastname(){
+         let lnameValue = $('#lname').val();
+         if (lnameValue.length == '') {
+           $('#lNameCheck').show();
+           lastNameError = false;
+           return false;
+         }
+          else if ((lnameValue.length < 3) ||
+           (lnameValue.length > 10)) {
+           $('#lNameCheck').show();
+            
+           lastNameError = false;
+           return false;
+         }
+         else {
+           $('#lNameCheck').hide();
+         }
+       }
+       
+       //validate user first name
+       function validateUsername() {
+         let usernameValue = $('#fname').val();
+         if (usernameValue.length == '') {
+           $('#usercheck').show();
+           usernameError = false;
+           return false;
+         }
+         else if ((usernameValue.length < 3) ||
+           (usernameValue.length > 10)) {
+           $('#usercheck').show();
+           
+           usernameError = false;
+           return false;
+         }
+         else {
+           $('#usercheck').hide();
+         }
+       } 
+             
+       //funcation for submit button
+       $('.submitBtn').click(function () {
+       
+         validateUsername();
+         validatelastname();
+         validatePhoneNumber();
+         validateEmail();
+         var response = grecaptcha.getResponse();
+         if (response.length == 0) {
+           document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+           return false;
+         }
+         if ((usernameError == true) &&
+           (lastNameError == true) &&
+           (phoneNoError == true) &&
+           (emailError == true)) {
+           return true;
+           
+         } else {
+           document.getElementById("test").reset();
+         }
+       }); 
+       
+       
+  });
+  function verifyCaptcha() {
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+  }
+    </script>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script type="text/javascript">
+      (function ($, W, D) {
+        var JQUERY4U = {};
+        JQUERY4U.UTIL = {
+          setupFormValidation: function () {
+            $('#google_form').validate({
+              ignore: ":hidden:not(#keycode)",
+              rules: {
+                "hiddencode": {
+                  required: function () {
+                    if (grecaptcha.getResponse() == '') {
+                      return true;
+                    } else { return false; }
+                  }
+                }
+              }
+            });
+          }
+        }
+        $(D).ready(function ($) {
+          JQUERY4U.UTIL.setupFormValidation();
+        });
+      })(jQuery, window, document);
+    </script> -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP9YUjtESieV5DTEIDJY2egTjJAdfnezg&callback=callMap">
+  
+    </script>
+  
+  </body>
 </html>
