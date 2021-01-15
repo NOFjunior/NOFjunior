@@ -161,8 +161,8 @@
             </h5>
           </div>
           <div class="form-group">
-            <input placeholder="Email" id="email" name="email">
-            <h5 id="emailvalid" class="error-msg">
+            <input placeholder="Email" id="yemail" name="yemail">
+            <h5 id="yemailvalid" class="error-msg">
               Your email must be a valid email
             </h5>
           </div>
@@ -173,8 +173,8 @@
             </h5>
           </div>
           <div class="form-group">
-            <input placeholder="Mobile" type="text" name="phone" id="phone" class="form-control">
-            <h5 id="phoneCheck" class="error-msg">
+            <input placeholder="Mobile" type="text" name="yphone" id="yphone" class="form-control">
+            <h5 id="yphoneCheck" class="error-msg">
               Enter 10 digit phone number
             </h5>
           </div>
@@ -336,14 +336,14 @@
          $(document).ready(function () {
            $('#usercheck').hide();
            $('#schoolNameCheck').hide();
-           $('#phoneCheck').hide();
-           $('#emailvalid').hide();
+           $('#yphoneCheck').hide();
+           $('#yemailvalid').hide();
            
            // error variable
            let usernameError = true;
            let schoolNameError = true;
-           let phoneNoError = true;
-           let emailError = true;
+           let yphoneNoError = true;
+           let yemailError = true;
            
             //funcation call for validation
            $('#username').keyup(function () {
@@ -354,10 +354,10 @@
              validateSchoolName();
            });
 
-           $('#phone').keyup(function () {
+           $('#yphone').keyup(function () {
              validatePhoneNumber();
            });
-           $('#email').keyup(function () {
+           $('#yemail').keyup(function () {
              validateEmail();
            });
            
@@ -381,19 +381,19 @@
            } 
             // Validate Email 
             function validateEmail(){
-              const email =
-                document.getElementById('email');
-              email.addEventListener('blur', () => {
+              const yemail =
+                document.getElementById('yemail');
+              yemail.addEventListener('blur', () => {
                 let regex =
                   /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
-                let s = email.value;
+                let s = yemail.value;
                 if (regex.test(s)) {
-                  emailError = true;
-                  $('#emailvalid').hide();
+                  yemailError = true;
+                  $('#yemailvalid').hide();
                 }
                 else {
-                  emailError = false;
-                  $('#emailvalid').show();
+                  yemailError = false;
+                  $('#yemailvalid').show();
                 }
               }) 
             }
@@ -420,16 +420,16 @@
            
            // validate phone number
            function validatePhoneNumber() {
-             let phoneValue = $('#phone').val();
+             let phoneValue = $('#yphone').val();
 
              if (phoneValue.length < 10) {
-               $('#phoneCheck').show();
+               $('#yphoneCheck').show();
 
-               phoneNoError = false;
+               yphoneNoError = false;
                return false;
              }
              else {
-               $('#phoneCheck').hide();
+               $('#yphoneCheck').hide();
              }
            }
            //funcation for submit button
