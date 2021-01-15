@@ -262,26 +262,26 @@
           <div class="row">
             <div class="form-group col-sm-6">
               <input type="text" placeholder="First Name" name="fname" id="fname" class="form-control">
-              <h5 id="usercheck" class="error-msg">
+              <h5 id="usercheck-index" class="error-msg-index">
                 Enter 3 charecter at least
               </h5>
             </div>
             <div class="form-group col-sm-6">
             
               <input type="text" placeholder="Last Name" name="lname" id="lname" class="form-control">
-              <h5 id="lNameCheck" class="error-msg">
+              <h5 id="lNameCheck-index" class="error-msg-index">
                 Enter 3 charecter at least
               </h5>
             </div>
             <div class="form-group col-sm-6">
               <input placeholder="Enter Phone No." type="text" name="phone" id="phone" class="form-control">
-              <h5 id="phoneCheck" class="error-msg">
+              <h5 id="phoneCheck-index" class="error-msg-index">
                 Enter 10 digit phone number
               </h5>
             </div>
             <div class="form-group col-sm-6">
               <input type="email" placeholder="Enter Email" name="email" id="email" class="form-control">
-              <h5 id="emailvalid" class="form-text error-msg">
+              <h5 id="emailvalid-index" class="form-text error-msg-index">
                 Your email must be a valid email
             </h5>
             </div>
@@ -458,6 +458,147 @@
             document.getElementById('g-recaptcha-error').innerHTML = '';
           }
     </script>
+    <script>
+
+      /********************************* Index form js************************************************/
+      
+      $(document).ready(function () {
+ 
+       
+       /*error msg function*/
+        $('#usercheck-index').hide();
+        $('#lNameCheck-index').hide();
+        $('#phoneCheck-index').hide();
+        $('#emailvalid-index').hide();
+       
+       // error variable
+       let usernameError = true;
+       let lastNameError = true;
+       let phoneNoError = true;
+       let emailError = true;
+       
+       //funcation call for validation
+       $('#fname').keyup(function () {
+         validateUsername();
+       });
+       
+       $('#lname').keyup(function () {
+         validatelastname();
+       });
+       
+        $('#phone').keyup(function () {
+         validatePhoneNumber();
+       });
+       $('#email').keyup(function () {
+           validateEmail();
+      });
+         
+      // Validate Email 
+      function validateEmail(){
+        const email =
+          document.getElementById('email');
+        email.addEventListener('blur', () => {
+          let regex =
+            /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+          let s = email.value;
+          if (regex.test(s)) {
+            emailError = true;
+            $('#emailvalid-index').hide();
+          }
+          else {
+            emailError = false;
+            $('#emailvalid-index').show();
+          }
+        }) 
+      }
+       
+       
+      // validate phone number
+      function validatePhoneNumber(){
+        let phoneValue = $('#phone').val();
+      
+         if (phoneValue.length < 10) { 
+          $('#phoneCheck-index').show();
+          
+          phoneNoError = false;
+          return false;
+        }
+        else {
+          $('#phoneCheck-index').hide();
+        }
+      }
+       
+      //validate last name
+       function validatelastname(){
+         let lnameValue = $('#lname').val();
+         if (lnameValue.length == '') {
+           $('#lNameCheck-index').show();
+           lastNameError = false;
+           return false;
+         }
+          else if ((lnameValue.length < 3) ||
+           (lnameValue.length > 10)) {
+           $('#lNameCheck-index').show();
+            
+           lastNameError = false;
+           return false;
+         }
+         else {
+           $('#lNameCheck-index').hide();
+         }
+       }
+       
+       //validate user first name
+       function validateUsername() {
+         let usernameValue = $('#fname').val();
+         if (usernameValue.length == '') {
+           $('#usercheck-index').show();
+           usernameError = false;
+           return false;
+         }
+         else if ((usernameValue.length < 3) ||
+           (usernameValue.length > 10)) {
+           $('#usercheck-index').show();
+           
+           usernameError = false;
+           return false;
+         }
+         else {
+           $('#usercheck-index').hide();
+         }
+       } 
+             
+       //funcation for submit button
+       $('.submitBtn').click(function () {
+       
+         validateUsername();
+         validatelastname();
+         validatePhoneNumber();
+         validateEmail();
+         var response = grecaptcha.getResponse();
+         if (response.length == 0) {
+           document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+           return false;
+         }
+         if ((usernameError == true) &&
+           (lastNameError == true) &&
+           (phoneNoError == true) &&
+           (emailError == true)) {
+           return true;
+           
+         } else {
+           document.getElementById("test").reset();
+         }
+       }); 
+       
+       
+  });
+  function verifyCaptcha() {
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+  }
+
+    </script>
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
