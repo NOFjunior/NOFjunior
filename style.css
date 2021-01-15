@@ -451,7 +451,8 @@ body {
 .sec-seven .get-in-touch .row{
   margin: 0;
 }
-.sec-seven  .error-msg, .one .error-msg{
+
+.sec-seven  .error-msg-index, .one .error-msg{
   font-size: 14px;
   color: #ff0000;
 }
