@@ -11,82 +11,111 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"-->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nofmain.css">
 
 
     <style>
 
-        section {
-        overflow-x: hidden;
+      body{
+
       }
 
-       img {
+      h3{
+        margin-top: 10%; 
+        padding: 10px 70px;
+        font-size: 40px;
+        color: #545454;
+        font-weight: 700;
+      }
+
+      h4 {
+        font-size: 2rem;
+        font-weight: 700;
+        padding-top: 25px;
+        padding-left: 10%;
+        color: #555;
+      }
+
+
+
+    .two img {
         width: 100%;
-        height: 100%;
+        height: auto;
       }
 
-      .pri-img {
-        width: 60%;
-        text-align: center;
-        margin: 2% auto;
-      }
-      
-      .text h1 {
-        color:#555;
-        font-weight: 700;
-        text-align: left;
-        margin-left: 15%;
-        margin-right: 10%;
-        margin-top: 10%;
+      .two .col-md {
+        color: #000;
+        padding: 0;
       }
 
-      .text p {
-        color: #555;
-        font-weight: 600;
-        line-height: 1.8;
-        width: 65%;
-        margin-left: 15%;
-        margin-top: 10px;
-      }
-
-      .text ol li {
-        color: #555;
-        font-weight: 400;
-        line-height: 1;
-        width: 65%;
-        margin-left: 20%;
-        margin-top: 7px;
-      }
-
-      h3 {
-        color:#555;
-        font-weight: 700;
-        text-align: left;
-        margin-left: 15%;
-        margin-right: 10%;
-        margin-top: 10%;
-        margin-bottom: 5%;
-      }
-
-      ol li {
-        color: #555;
+      .text {
+        background-color: rgb(248 200 83);
         font-weight: 300;
-        font-size: 18px;
-        line-height: 1.5;
-        width: 65%;
-        margin-left: 20%;
-        margin-top: 7px;
-
+        line-height: 1.8;
+        font-size: 16px;
       }
-
-      spam {
-        margin-left: 20%;
-        margin-top: 10px;
-      }
-
       
+      .text p {
+        width: 90%;
+        padding: 10px 70px;
+        }
+      
+      /* section 3 */
 
- </style>  
+      .three {
+        background-color: #fd5;
+      }
+
+      .three .image {
+        width: 100%;
+        height: auto;
+        /*overflow: hidden;*/
+        background-image: url(https://dl3.pushbulletusercontent.com/hU0xGZENrtqCvRAAz8KYVCSphbR8mfIl/ab-img2.png);
+        background-size: cover;
+        background-position: center;
+      }
+
+       .ul-mr {
+        padding-left: 15%;
+       }
+
+       .ab-img-map {
+        height: 200px;
+        background-image: url(https://dl3.pushbulletusercontent.com/IVE8bcro6rmpTyrhuZ2YH1Vr6yrOqAGo/ab-img3.jpg);
+       }
+
+       h5 { 
+            display: flex; 
+            padding-top: 5%; 
+            margin-left: 5%;
+            color: white; 
+            font-size: 3rem;
+        } 
+
+        h5:hover span {display:none}
+        h5:hover:before {content:"4500+ Schools in 11 Countries"}
+  
+  
+        
+
+        @media screen and (max-width: 900px) {
+       .three .image {
+         height: 560px;
+        
+      }
+
+      }
+
+       @media screen and (max-width: 680px) {
+       .three .image {
+         height: 200px;
+        
+      }
+
+      }
+     
+
+    </style>  
 
 
   </head>
@@ -107,13 +136,13 @@
           <a class="nav-link active" href="index.html">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about us.html">ABOUT US</a>
+          <a class="nav-link" href="about us.html" style="color: #efd173 ! important;">ABOUT US</a>
         </li>
-        <li class="nav-item">
+         <li class="nav-item">
           <a class="nav-link" href="why nof.html">WHY NOF</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="awards.html"  style="color: #efd173 ! important;">AWARDS &amp; RECOGNITION</a>
+          <a class="nav-link" href="awards.html">AWARDS &amp; RECOGNITION</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="downlads.html">DOWNLOADS</a>
@@ -131,67 +160,57 @@
     </div>
   </nav>
 
+  
+<!--*********************************************************************************************************-->
 
- <!--*****************************************************************************************-->
+<section class="two" style="overflow: hidden;">
+    <div class="row">
+        <div class="col-md">
+          <img src="https://dl3.pushbulletusercontent.com/d8loZ2S6kBfLtjiB6mE2wSdHjIZfbhrt/ab-img1.png">
+        </div>
+        <div class="col-md text">
+          <h3>About NOF</h3>
+          <p>
+            NOF is an organization of scholastic examination conducted across the country. An exclusive body of academicians of national and international fame prepares all the questions for the examination. Moreover, our R&D; team consists of people from the topmost institutes across the world which keeps a tab on the latest development on the subject matters to ensure that the quality and competency of the examination can be maintained on an International ground.
+          </p>
+        </div>
+      </div>
+   </section>
 
-<section>
-  <div class="row">
-    <div class="col-md text">
-      <h1><span style="font-size: 12px">NATIONAL OLYMPIAD FOUNDATION (NOF) -</span><br>PRIZE & AWARDS</h1>
-      <p>Participation itself is worth applauding and for this, every student earns a participation certificate.</p>
-      <ol>
-        <li>Participation Certificate to all the participants</li>
-        <li>Merit certificates to all the toppers and Phase 2 selected students</li>
-        <li>Awards to all the class toppers</li>
-        <li>Awards to state toppers</li>
-        <li>Excellence in education award</li>
-        <li>Educator of the year award</li>
-        <li>Best School awards</li>
-        <li>Best Coordinator awards</li>
-        <li>Medal of excellence to the toppers</li>
-        <li>Gold, Silver & Bronze medals</li>
-      </ol>
-      <spam style="font-size: 10px;">(all the medals are gold/silver/bronze color plated)</spam>
+  <section class="three" style="overflow: hidden;">
+    <div class="">
+      <div class="row">
+        <div class="col-md text">
+          <h4>
+            NOF Conducts<br>International Olympiads in<br>9 subjects in more than 11<br>countries:
+          </h4>
+          <ol class="ul-mr">
+            <li>International <b>Math</b> Qualifier (IMQ)</li>
+            <li>International <b>Science</b> Qualifier (ISQ)</li>
+            <li>International <b>English</b> Qualifier (IEQ)</li>
+            <li>International <b>GK</b> Qualifier (IGQ)</li>
+            <li>International <b>Aptitude</b> Qualifier (IAQ)</li>
+            <li>International <b>French</b> Qualifier (IFQ)</li>
+            <li>International <b>Hindi</b> Qualifier (IHQ)</li>
+            <li>International <b>Commerce</b> Qualifier (IComQ)</li>
+            <li>International <b>Biology</b> Qualifier (IBQ)</li>
+          </ol>
+        </div>
+        <div class="col-md image">
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="col-md image" style="padding-left: 0px;">
-      <img src="https://dl3.pushbulletusercontent.com/40pjh1U8EBLc6OfWKksP8OF5mhgyzRAI/Aw-img1.png" alt="">
-    </div>
-  </div>
-</section>
+  <section class="ab-img-map">
 
-<section style="background-color: #fd5; padding-bottom: 2%;">
-  <div class="row">
-    <div class="col-md price">
-      <h3>PRIZES FOR<br>PHASE 1</h3>
-      <ol>
-        <li>Participation Certificate to all the participants</li>
-        <li>Merit certificates to all the toppers and Phase 2 selected students</li>
-      </ol>
-      <spam style="font-size: 10px;">(all the medals are gold/silver/bronze color plated)</spam>
-    </div>
-    <div class="col-md price">
-      <h3>CRITERIA FOR PHASE-II<br>SELECTION</h3>
-      <ol>
-        <li>State Rank 1 to 10 will be qualified.</li>
-        <li>Class toppers (of any particular subject) who have scored a minimum of 50% in the exam and a minimum of 5 students who have participated from that particular class in that particular subject only, will be qualified.</li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="row" style="background-color: #f2f2f2">
-    <img src="https://dl3.pushbulletusercontent.com/HVZueTF2vHM3b91BcjwRSJ2ncBxu4tOa/Aw-img2.png" alt="price" class="pri-img">
-  </div>
-
-</section>
+    <h5><span>OUR PRESENCE</span></h5>
+    
+  </section>
 
 
- 
-
-<!--*****************************************************************************************-->
- <section class="sec-six" id="sec-six">
+<!--*********************************************************************************************************-->
+  <section class="sec-six" id="sec-six">
     <div class="container">
       <div class="row">
         <div class="col-md mrg">
@@ -232,11 +251,10 @@
     </div>
   </section>
 
-  <!--div class="map">
+  <div class="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14720.388091538412!2d75.897959!3d22.7246349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1c1071e66436e26a!2sNational%20Olympiad%20Foundation!5e0!3m2!1sen!2sin!4v1608547736958!5m2!1sen!2sin" width="600" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
-  </div-->
-
-  <section class="sec-eight" style="background-color: #f44;">
+  </div>
+  <section class="sec-eight">
     <div class="row">
       <div class="col-md-3"  style="margin-left: 10%;">
        <div class="icon">
@@ -256,14 +274,13 @@
           </div>
       </div>
       <div class="col-md-7">
-        <p>Made with ♥ for students. © NOF 2020-2022. All rights reserved.| <a href="privacy.html" style="color: #fff">Privacy Policy</a> | <a href="privacy.html" style="color: #fff">Terms</a> | <a href="privacy.html" style="color: #fff">Diclamer</a> </p>
+        <p>Made with ♥ for students. © NOF 2020-2022. All rights reserved.| <a href="privacy.html">Privacy Policy</a> | <a href="privacy.html">Terms</a> | <a href="privacy.html">Diclamer</a> </p>
       </div>
     </div>
   </section>
 
 
-<!-- Map Javascript -->
-  <!--script>
+  <script>
    function callMap() {
       
       var location = {lat: 34.433340, lng: -93.029950 };
@@ -273,9 +290,6 @@
       });
       
     }
-  </script-->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </script>
   </body>
 </html>
