@@ -15,13 +15,21 @@
 
 
     <style>
-      
-      
 
       .sec-two .second {
 
         margin: 150px 150px 0 150px;
      }
+
+          .btnch {
+            margin: 5% auto;
+            color: white;
+            font-weight: 600;
+            background-color: #44e;
+            border: none;
+            width: 150px;
+            height: 50px;
+          }
 
      @media only screen and (max-width: 740px) {
 
@@ -29,6 +37,7 @@
 
         margin: 150px 0 0 0;
      }
+  }
 
 
      @media only screen and (max-width: 540px) {
@@ -391,8 +400,7 @@
     </div>
   </section>
 
-
-  <section class="sec-seven">
+<section class="sec-seven">
     <div class="conatiner">
       <div class="row">
         <div class="col-md address">
@@ -412,8 +420,7 @@
             <a href="https://www.youtube.com/channel/UCoVgu8YEtOEDZRnHoebokEA" style="color: white">
               <i class="fab fa-youtube fa-2x" style="margin-right: 10px;"></i>
             </a>
-
-          </div>
+         </div>
         </div>
         <div class="col-md form">
         <h2>Get in touch with us</h2>
@@ -448,37 +455,30 @@
               <textarea placeholder="Type your message here..."></textarea>
             </div>
           </div>
-          
-        
-        
+
           <div class="row submit">
             <div class="col-sm">
               <div class="g-recaptcha" data-sitekey="6Lc-migaAAAAAIPb7ZHiLx6LSls_y0QN8RXobQdf" data-callback="verifyCaptcha"></div>
               <div id="g-recaptcha-error"></div>
             </div>
-            <div class="col-sm" id="btn"><button type="button" class="submitBtn">Submit</button></div>
           </div>
-        
-        
-          <p>Thanks for submitting!</p>
-        
-        </form>
+          
+          <div class="col-sm" id="btn"><button type="button" class="submitBtn btnch">Submit</button></div>
+          
+          </form>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14720.388091538412!2d75.897959!3d22.7246349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1c1071e66436e26a!2sNational%20Olympiad%20Foundation!5e0!3m2!1sen!2sin!4v1608547736958!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
-  </div>
-
+  
   <section class="sec-eight">
     <div class="row">
       <div class="col-md">
         <ul>
           <li style="border-right: 1px solid #44e;"><a href="privacy.html">Privacy Policy</a></li>
           <li style="border-right: 1px solid #44e;"><a href="terms.html">Terms of Service</a></li>
-          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li style="border-right: 1px solid #44e;"><a href="dislaimer.html">Disclaimer</a></li>
         </ul>
       </div>
       <div class="col-md">
@@ -487,187 +487,166 @@
     </div>
   </section>
 
-
+  
+  <section class="sec-eight">
+    <div class="row">
+      <div class="col-md">
+        <ul>
+          <li style="border-right: 1px solid #44e;"><a href="privacy.html">Privacy Policy</a></li>
+          <li style="border-right: 1px solid #44e;"><a href="terms.html">Terms of Service</a></li>
+          <li style="border-right: 1px solid #44e;"><a href="dislaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div class="col-md">
+        <p>Made with ♥ for kids. © NOF Junior 2020-2022. All rights reserved.</p>
+      </div>
+    </div>
+  </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
-  
-    function callMap() {
-      
-      var location = {lat: 34.433340, lng: -93.029950 };
-      var map = new google.maps.Map(document.getElementById("api"), {
-        zoom: 4,
-        center: location
-      });
-      
-    }
+       
      $(document).ready(function () {
  
        
-       /*error msg function*/
-        $('#usercheck').hide();
-        $('#lNameCheck').hide();
-        $('#phoneCheck').hide();
-        $('#emailvalid').hide();
+                    /*error msg function*/
+                    $('#usercheck').hide();
+                    $('#lNameCheck').hide();
+                    $('#phoneCheck').hide();
+                    $('#emailvalid').hide();
        
-       // error variable
-       let usernameError = true;
-       let lastNameError = true;
-       let phoneNoError = true;
-       let emailError = true;
+                     // error variable
+                     let usernameError = true;
+                     let lastNameError = true;
+                     let phoneNoError = true;
+                     let emailError = true;
        
-       //funcation call for validation
-       $('#fname').keyup(function () {
-         validateUsername();
-       });
-       
-       $('#lname').keyup(function () {
-         validatelastname();
-       });
-       
-        $('#phone').keyup(function () {
-         validatePhoneNumber();
-       });
-       $('#email').keyup(function () {
-           validateEmail();
-      });
+                   //funcation call for validation
+                   $('#fname').keyup(function () {
+                     validateUsername();
+                   });
+                   
+                   $('#lname').keyup(function () {
+                     validatelastname();
+                   });
+                   
+                    $('#phone').keyup(function () {
+                     validatePhoneNumber();
+                   });
+                   $('#email').keyup(function () {
+                       validateEmail();
+                  });
          
-      // Validate Email 
-      function validateEmail(){
-        const email =
-          document.getElementById('email');
-        email.addEventListener('blur', () => {
-          let regex =
-            /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
-          let s = email.value;
-          if (regex.test(s)) {
-            emailError = true;
-            $('#emailvalid').hide();
-          }
-          else {
-            emailError = false;
-            $('#emailvalid').show();
-          }
-        }) 
-      }
+                  // Validate Email 
+                  function validateEmail(){
+                    const email =
+                      document.getElementById('email');
+                    email.addEventListener('blur', () => {
+                      let regex =
+                        /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+                      let s = email.value;
+                      if (regex.test(s)) {
+                        emailError = true;
+                        $('#emailvalid').hide();
+                      }
+                      else {
+                        emailError = false;
+                        $('#emailvalid').show();
+                      }
+                    }) 
+                  }
        
        
-      // validate phone number
-      function validatePhoneNumber(){
-        let phoneValue = $('#phone').val();
-      
-         if (phoneValue.length < 10) { 
-          $('#phoneCheck').show();
-          
-          phoneNoError = false;
-          return false;
-        }
-        else {
-          $('#phoneCheck').hide();
-        }
-      }
+                        // validate phone number
+                        function validatePhoneNumber(){
+                          let phoneValue = $('#phone').val();
+                        
+                           if (phoneValue.length < 10) { 
+                            $('#phoneCheck').show();
+                            
+                            phoneNoError = false;
+                            return false;
+                          }
+                          else {
+                            $('#phoneCheck').hide();
+                          }
+                        }
        
-      //validate last name
-       function validatelastname(){
-         let lnameValue = $('#lname').val();
-         if (lnameValue.length == '') {
-           $('#lNameCheck').show();
-           lastNameError = false;
-           return false;
-         }
-          else if ((lnameValue.length < 3) ||
-           (lnameValue.length > 10)) {
-           $('#lNameCheck').show();
-            
-           lastNameError = false;
-           return false;
-         }
-         else {
-           $('#lNameCheck').hide();
-         }
-       }
+                    //validate last name
+                     function validatelastname(){
+                       let lnameValue = $('#lname').val();
+                       if (lnameValue.length == '') {
+                         $('#lNameCheck').show();
+                         lastNameError = false;
+                         return false;
+                       }
+                        else if ((lnameValue.length < 3) ||
+                         (lnameValue.length > 10)) {
+                         $('#lNameCheck').show();
+                          
+                         lastNameError = false;
+                         return false;
+                       }
+                       else {
+                         $('#lNameCheck').hide();
+                       }
+                     }
        
-       //validate user first name
-       function validateUsername() {
-         let usernameValue = $('#fname').val();
-         if (usernameValue.length == '') {
-           $('#usercheck').show();
-           usernameError = false;
-           return false;
-         }
-         else if ((usernameValue.length < 3) ||
-           (usernameValue.length > 10)) {
-           $('#usercheck').show();
-           
-           usernameError = false;
-           return false;
-         }
-         else {
-           $('#usercheck').hide();
-         }
-       } 
+                         //validate user first name
+                         function validateUsername() {
+                           let usernameValue = $('#fname').val();
+                           if (usernameValue.length == '') {
+                             $('#usercheck').show();
+                             usernameError = false;
+                             return false;
+                           }
+                           else if ((usernameValue.length < 3) ||
+                             (usernameValue.length > 10)) {
+                             $('#usercheck').show();
+                             
+                             usernameError = false;
+                             return false;
+                           }
+                           else {
+                             $('#usercheck').hide();
+                           }
+                         } 
              
-       //funcation for submit button
-       $('.submitBtn').click(function () {
+                   //funcation for submit button
+                   $('.submitBtn').click(function () {
+                   
+                     validateUsername();
+                     validatelastname();
+                     validatePhoneNumber();
+                     validateEmail();
+                     var response = grecaptcha.getResponse();
+                     if (response.length == 0) {
+                       document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+                       return false;
+                     }
+                     if ((usernameError == true) &&
+                       (lastNameError == true) &&
+                       (phoneNoError == true) &&
+                       (emailError == true)) {
+                       return true;
+                       
+                     } else {
+                       document.getElementById("test").reset();
+                     }
+                   }); 
        
-         validateUsername();
-         validatelastname();
-         validatePhoneNumber();
-         validateEmail();
-         var response = grecaptcha.getResponse();
-         if (response.length == 0) {
-           document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
-           return false;
-         }
-         if ((usernameError == true) &&
-           (lastNameError == true) &&
-           (phoneNoError == true) &&
-           (emailError == true)) {
-           return true;
-           
-         } else {
-           document.getElementById("test").reset();
-         }
-       }); 
        
-       
-  });
-  function verifyCaptcha() {
-    document.getElementById('g-recaptcha-error').innerHTML = '';
-  }
+          });
+          function verifyCaptcha() {
+            document.getElementById('g-recaptcha-error').innerHTML = '';
+          }
     </script>
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <!-- <script type="text/javascript">
-      (function ($, W, D) {
-        var JQUERY4U = {};
-        JQUERY4U.UTIL = {
-          setupFormValidation: function () {
-            $('#google_form').validate({
-              ignore: ":hidden:not(#keycode)",
-              rules: {
-                "hiddencode": {
-                  required: function () {
-                    if (grecaptcha.getResponse() == '') {
-                      return true;
-                    } else { return false; }
-                  }
-                }
-              }
-            });
-          }
-        }
-        $(D).ready(function ($) {
-          JQUERY4U.UTIL.setupFormValidation();
-        });
-      })(jQuery, window, document);
-    </script> -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP9YUjtESieV5DTEIDJY2egTjJAdfnezg&callback=callMap">
-  
+      
     </script>
   
   </body>
 </html>
-
