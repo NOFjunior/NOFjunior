@@ -482,15 +482,15 @@ body {
   height: 60px;
 }
 
-/* .sec-seven .submit div {
-  float: left;
-  background-color: white;
-  height: 100%;
-  width: 220px;
-  color: black;
+.btnch {
+    margin: 5% auto;
+    color: white;
+    font-weight: 600;
+    background-color: #44e;
+    border: none;
+    width: 150px;
+    height: 50px;
 }
-
-*/
 
 .sec-seven .submit button {
   float: right;
