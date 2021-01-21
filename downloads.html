@@ -19,16 +19,15 @@
         padding-bottom: 40px;
       }
 
-      .one h2 {
+      .one h1 {
         text-align: center;
         padding: 20px;
         color: white;
         opacity: 0.3;
-        font-size: 40px;
       }
 
       .one .row {
-        margin: auto 10% ;
+        margin: auto 14% ;
       }
 
       .one .row .col-md{
@@ -37,7 +36,6 @@
          text-align: center;
          position: relative;
          height: 250px;
-         margin-bottom: 10px;
       }
        
       .one .row .col-md .center{
@@ -62,7 +60,6 @@
         position: relative;
         top: 180px;
         border: none;
-        cursor: pointer;
       }
 
 
@@ -87,7 +84,6 @@
          font-weight: 700;
          font-size: 22px;
          border: none;
-         cursor: pointer;
          margin-bottom: 40px;
        }
 
@@ -100,8 +96,8 @@
         color: blue;
         background-color: rgb(154, 154, 231);
        }
-      
-      .btnch {
+
+       .btnch {
             margin: 5% auto;
             color: white;
             font-weight: 600;
@@ -119,7 +115,7 @@
   <nav class="navbar sticky-top navbar-expand-md navbar-light">
 
     <a class="navbar-brand" href="index.html">
-      <img src="images/nof-junior-logo-cloud.png" />
+       <img src="https://i.postimg.cc/C5csCwNz/nof-junior-logo-cloud.png" alt="NOF junior">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -140,7 +136,7 @@
           <a class="nav-link" href="awards.html">AWARDS & RECOGNITION</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Home.html">OLYMPIAD FOR CLASS 6-12</a>
+          <a class="nav-link" href="https://www.nof.org.in/">OLYMPIAD FOR CLASS 6-12</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="downloads.html">DOWNLOADS</a>
@@ -172,7 +168,7 @@
   </nav>
 
 <section class="one">
-  <h2>ESSENTIAL DOWNLOADS</h2>
+  <h1>ESSENTIAL DOWNLOADS</h1>
   <div class="row">
     <div class="col-md">
       <div class="center"><p>NOF JUNIOR E-BROCHURE</p></div>
@@ -375,8 +371,148 @@
   </section>
 
 
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+  
+      
+     $(document).ready(function () {
+ 
+       
+                    /*error msg function*/
+                    $('#usercheck').hide();
+                    $('#lNameCheck').hide();
+                    $('#phoneCheck').hide();
+                    $('#emailvalid').hide();
+       
+                     // error variable
+                     let usernameError = true;
+                     let lastNameError = true;
+                     let phoneNoError = true;
+                     let emailError = true;
+       
+                   //funcation call for validation
+                   $('#fname').keyup(function () {
+                     validateUsername();
+                   });
+                   
+                   $('#lname').keyup(function () {
+                     validatelastname();
+                   });
+                   
+                    $('#phone').keyup(function () {
+                     validatePhoneNumber();
+                   });
+                   $('#email').keyup(function () {
+                       validateEmail();
+                  });
+         
+                  // Validate Email 
+                  function validateEmail(){
+                    const email =
+                      document.getElementById('email');
+                    email.addEventListener('blur', () => {
+                      let regex =
+                        /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+                      let s = email.value;
+                      if (regex.test(s)) {
+                        emailError = true;
+                        $('#emailvalid').hide();
+                      }
+                      else {
+                        emailError = false;
+                        $('#emailvalid').show();
+                      }
+                    }) 
+                  }
+       
+       
+                        // validate phone number
+                        function validatePhoneNumber(){
+                          let phoneValue = $('#phone').val();
+                        
+                           if (phoneValue.length < 10) { 
+                            $('#phoneCheck').show();
+                            
+                            phoneNoError = false;
+                            return false;
+                          }
+                          else {
+                            $('#phoneCheck').hide();
+                          }
+                        }
+       
+                    //validate last name
+                     function validatelastname(){
+                       let lnameValue = $('#lname').val();
+                       if (lnameValue.length == '') {
+                         $('#lNameCheck').show();
+                         lastNameError = false;
+                         return false;
+                       }
+                        else if ((lnameValue.length < 3) ||
+                         (lnameValue.length > 10)) {
+                         $('#lNameCheck').show();
+                          
+                         lastNameError = false;
+                         return false;
+                       }
+                       else {
+                         $('#lNameCheck').hide();
+                       }
+                     }
+       
+                         //validate user first name
+                         function validateUsername() {
+                           let usernameValue = $('#fname').val();
+                           if (usernameValue.length == '') {
+                             $('#usercheck').show();
+                             usernameError = false;
+                             return false;
+                           }
+                           else if ((usernameValue.length < 3) ||
+                             (usernameValue.length > 10)) {
+                             $('#usercheck').show();
+                             
+                             usernameError = false;
+                             return false;
+                           }
+                           else {
+                             $('#usercheck').hide();
+                           }
+                         } 
+             
+                   //funcation for submit button
+                   $('.submitBtn').click(function () {
+                   
+                     validateUsername();
+                     validatelastname();
+                     validatePhoneNumber();
+                     validateEmail();
+                     var response = grecaptcha.getResponse();
+                     if (response.length == 0) {
+                       document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+                       return false;
+                     }
+                     if ((usernameError == true) &&
+                       (lastNameError == true) &&
+                       (phoneNoError == true) &&
+                       (emailError == true)) {
+                       return true;
+                       
+                     } else {
+                       document.getElementById("test").reset();
+                     }
+                   }); 
+       
+       
+          });
+          function verifyCaptcha() {
+            document.getElementById('g-recaptcha-error').innerHTML = '';
+          }
+    </script>
 </body>
 </html>
