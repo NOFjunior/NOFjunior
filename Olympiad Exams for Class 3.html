@@ -82,6 +82,16 @@
          color: white;
       }
 
+      .btnch {
+            margin: 5% auto;
+            color: white;
+            font-weight: 600;
+            background-color: #44e;
+            border: none;
+            width: 150px;
+            height: 50px;
+          }
+
       @media screen and (max-width: 680px) {
        .one .row {
           display: inline;
@@ -135,6 +145,7 @@
               <div class="hide">
                 <ul>
                   <li><a  href="practice.html">PRACTICE KIT</a></li>
+                  <li><a  href="#sec-five">PRACTICE KIT</a></li>
                   <li><a  href="reports.html">REPORTS &amp; ANALYSIS</a></li>
                   <li><a  href="registration.html">REGISTER YOUR SCHOOL</a></li>
                   <li><a  href="#sec-six">CONTACT</a></li>
@@ -164,6 +175,8 @@
         <a href="International Junior English Olympiad.html"><li>International Junior English Olympiad</li></a>
         <a href="International Junior GK Olympiad.html"><li>International Junior GK Olympiad</li></a>
         <a href="International Junior Cyber Olympiad.html"><li>International Junior Cyber Olympiad</li></a>
+        <a href="International Junior French Olympiad.html"><li>International Junior French Olympiad</li></a>
+        <a href="International Junior Hindi Olympiad.html"><li>International Junior Hindi Olympiad</li></a>
 
         <br>
         <p>NOF Junior  now also accepts Individual registration. You can now register your child and can appear for the Olympiad online.</p>
@@ -257,26 +270,26 @@
           <div class="row">
             <div class="form-group col-sm-6">
               <input type="text" placeholder="First Name" name="fname" id="fname" class="form-control">
-              <h5 id="usercheck" class="error-msg">
+              <h5 id="usercheck" class="error-msg-index">
                 Enter 3 charecter at least
               </h5>
             </div>
             <div class="form-group col-sm-6">
             
               <input type="text" placeholder="Last Name" name="lname" id="lname" class="form-control">
-              <h5 id="lNameCheck" class="error-msg">
+              <h5 id="lNameCheck" class="error-msg-index">
                 Enter 3 charecter at least
               </h5>
             </div>
             <div class="form-group col-sm-6">
               <input placeholder="Enter Phone No." type="text" name="phone" id="phone" class="form-control">
-              <h5 id="phoneCheck" class="error-msg">
+              <h5 id="phoneCheck" class="error-msg-index">
                 Enter 10 digit phone number
               </h5>
             </div>
             <div class="form-group col-sm-6">
               <input type="email" placeholder="Enter Email" name="email" id="email" class="form-control">
-              <h5 id="emailvalid" class="form-text error-msg">
+              <h5 id="emailvalid" class="form-text error-msg-index">
                 Your email must be a valid email
             </h5>
             </div>
@@ -284,19 +297,15 @@
               <textarea placeholder="Type your message here..."></textarea>
             </div>
           </div>
-          
-        
-        
+                  
           <div class="row submit">
             <div class="col-sm">
               <div class="g-recaptcha" data-sitekey="6Lc-migaAAAAAIPb7ZHiLx6LSls_y0QN8RXobQdf" data-callback="verifyCaptcha"></div>
               <div id="g-recaptcha-error"></div>
             </div>
-            <div class="col-sm" id="btn"><button type="button" class="submitBtn">Submit</button></div>
           </div>
-        
-        
-          <p>Thanks for submitting!</p>
+          
+          <div class="col-sm" id="btn"><button type="button" class="submitBtn btnch">Submit</button></div>
         
         </form>
         </div>
